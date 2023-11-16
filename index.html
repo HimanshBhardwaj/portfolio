@@ -6,6 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-    <h4>hello</h4>
+    <div id="app"></div>
+    <script>
+      document.create(tag,text,fun){
+          let ele= document.createElement(tag)
+          ele.innerHTML = (text)
+          ele.onclick = (fun)
+          document.querySelector("#app").insertAdjacentElement("beforeend",ele)
+      }
+      create("h1","hy",function(){
+        create("h2","hello",function(){
+            alert("yes")
+        })
+      })
+    </script>
   </body>
 </html>
